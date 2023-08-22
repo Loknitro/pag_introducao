@@ -1,0 +1,55 @@
+body {
+    background-color: #0a192f;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    color: #ccd5f5;
+    height: 100vh;
+}
+
+div {
+    margin-bottom: 2%;
+}
+
+.header {
+    height: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2%;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+}
+
+.conteudo {
+    display: block;
+    flex-grow: 1;
+    margin-left: 25%;
+}
+
+#subtitulo {
+    color: #05ffdb;
+    font-size: 25px;
+}
+
+#funcao{
+    font-size: 35px;
+    color: #8892b0;
+}
+
+#descricao {
+    color: #8892b0;
+    font-size: 25px;
+    text-align: start;
+    width: 80%;
+}
+
+.footer {
+    display: flex;
+}
+
+/*verde : 98FB98* verde escuro:19c37d
+verde agua claro:#05ffdb/
