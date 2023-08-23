@@ -1,54 +1,128 @@
+:root {
+    --font-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+    --font-sans: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
+}
+
 body {
     background-color: #0a192f;
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 60px;
-    color: #ccd5f5;
+    font-family: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
+    color: #ccd6f6;
     height: 100vh;
 }
 
-div {
-    margin-bottom: 2%;
+.big-texto {
+    margin: 0;
+    font-size: clamp(40px, 4vw, 80px);
+    line-height: 1.1;
 }
 
 .header {
-    height: 2em;
+    height: 6em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 2%;
+    padding-left: 2%;
+    transition: transform .7s ease-in-out;
+    transform: translateY(0%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header a{
+    padding: 10px;
+    color: #05ffdb;
+    font-family: var(--font-mono);
+    text-decoration: none;
+}
+
+.header a .turnt {
+    color: #ccd6f6;
+    transition: color 0.3s ease;
+}
+
+.header a .turnt:hover {
+    color: #05ffdb;
+}
+
+.header ol button {
+    background-color: transparent;
+    color: #05ffdb;
+    border: 1px solid #05ffdb;
+    padding: 15px;
+    border-radius: 5px;
+}
+.header-hidden {
+    transform: translateY(-100%);
 }
 
 #logo {
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: 85px;
 }
 
-.conteudo {
-    display: block;
-    flex-grow: 1;
-    margin-left: 25%;
+.parte1 {
+    padding: 0px 150px;
 }
+
+.introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 70%) {
+    .introducao {
+      margin-left: calc(270px * (1 - (30% - 70%) / (100% - 70%)));
+      margin-right: calc(270px * (1 - (30% - 70%) / (100% - 70%)));
+    }
+  }
 
 #subtitulo {
     color: #05ffdb;
-    font-size: 25px;
+    font-size: 16px;
+    font-family: var(--font-mono);
+}
+
+#name {
+    font-size: clamp(40px, 8vw, 80px);
+    
 }
 
 #funcao{
     font-size: 35px;
-    color: #8892b0;
+    color: #8892B0;
 }
 
 #descricao {
-    color: #8892b0;
-    font-size: 25px;
+    color: #8892B0;
+    font-size: 16px;
     text-align: start;
-    width: 80%;
 }
 
-.footer {
-    display: flex;
+#git-btn {
+    background: none;
+    border: 1px solid #05ffdb;
+    color: #05ffdb;
+    border-radius: 5px;
+    padding: 20px 28px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#git-btn a {
+    text-decoration: none;
+}
+#git-btn a:visited {
+    color: #05ffdb;
+    
 }
 
 /*verde : 98FB98* verde escuro:19c37d
