@@ -9,17 +9,17 @@
 </head>
 <body>
     <div class="header">
-            <a href="">
+            <a href="#ini">
                 <img id="logo" src="icons/icon-without-bg.png" alt="" title="Logo">
             </a>
             <ol>
-                <a href="#sobre">01.<span class="turnt"> Sobre</span></a>
-                <a href="#experiencia">02. <span class="turnt">Experiência</span></a>
-                <a href="#contato">03. <span class="turnt">Contato</span></a>
-                <button>Test button</button>
+                <a href="#sobre">01.<span class="turnt">Sobre</span></a>
+                <a href="#experiencia">02.<span class="turnt">Experiência</span></a>
+                <a href="#contato">03.<span class="turnt">Contato</span></a>
+                <a href="" ><button class="btn-geral">Currículo</button></a>
             </ol>
     </div>
-    <div class="parte1">
+    <div id="ini"class="separador">
         <div class="introducao">
             <div id="subtitulo">
                 <div>
@@ -41,14 +41,47 @@
                     Sou desenvolvedor de software e analista de sistema 
                     com experiência em Java e PL/SQL, atualmente estou aprendendo desenvolvimento web e me aperfeiçoando 
                     no que já tenho conhecimento.<br>
-                    Na minha visão todo desafio é um jogo, o progresso é bom, porém, finalizá-lo e finalmente vencer é melhor ainda.
+                    Na minha visão, todo desafio é um jogo, em que progredir é prazeroso,
+                     porém, finalizá-lo e finalmente vencer é melhor ainda.
                 </p>
             </div>
-            <button id="git-btn">
-                <a tabindex="-1" href="https://github.com/Loknitro">
+            <a tabindex="-1" href="https://github.com/Loknitro">
+                <button id="cur-btn" class="btn-geral">
                     Veja o meu currículo!
-                </a>
-            </button>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div id="sobre" class="separador">
+        <div class="titulo-paragrafo">
+            <span style="color: #05ffdb">01.</span>Sobre mim
+        </div>
+        <div id="bio">
+            <p>
+                Olá! Meu nome é Leonardo e eu gosto de criar coisas úteis e marcantes para as pessoas.
+                Meu interesse de pertencer à área surgiu quando percebi que programar e
+                resolver problemas se parecem com um quebra-cabeça: Tudo precisa 
+                se encaixar de forma harmoniosa e correta para funcionar.
+            </p>
+            <p>
+                Já tive a oportunidade de trabalhar numa <a href="https://www.novomundo.com.br">empresa de varejo</a> 
+                como primeiro emprego na área, e agora estou <a href="https://senadorcanedo.go.gov.br">numa prefeitura de tecnologia.</a> 
+                Meu objetivo por agora é desenvolver da melhor forma o que me for pedido, 
+                adquirindo mais conhecimento para criar softwares com ainda mais qualidade.
+            </p>
+            <p>
+                Recentemente, venho estudando e trabalhando com as seguintes tecnologias:
+            </p>
+        </div>
+        <div>
+            <ul id="tec">
+                <li>Java</li>
+                <li>PL/SQL</li>
+                <li>WordPress</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Unity</li>
+            </ul>
         </div>
     </div>
     <script src="script.js"></script>

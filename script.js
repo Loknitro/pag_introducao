@@ -13,3 +13,33 @@ document.addEventListener('DOMContentLoaded', function () {
         prevScrollPos = currentScrollPos;
     });
 });
+
+/* Rolagem até o início */
+const startLink = document.querySelector('a[href="#ini"]');
+
+startLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    const target = document.querySelector("#ini");
+
+    target.scrollIntoView({behavior: "smooth"})
+});
+
+/* Rolagem até o sobre */
+const sobreLink = document.querySelector('a[href="#sobre"]');
+
+sobreLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    const target = document.querySelector("#sobre");
+
+    target.scrollIntoView({behavior: "smooth"})
+});
+
+/* Rolagem até o sobre */
+const expLink = document.querySelector('a[href="#experiencia"]');
+
+expLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    const target = document.querySelector("#experiencia");
+
+    target.scrollIntoView({behavior: "smooth"})
+});
