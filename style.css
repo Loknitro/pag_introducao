@@ -1,11 +1,16 @@
 :root {
     --font-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
     --font-sans: 'Calibre','Inter','San Francisco','SF Pro Text',-apple-system,system-ui,sans-serif;
-    --teal: #05ffdb;
+    --teal: #64ffda;
     --light-green: #98FB98;
     --default-text: #ccd6f6;
     --dimmed-text: #8892B0;
     --background:  #0a192f;
+    --background-details: #233554;
+}
+
+* {
+    z-index: 5;
 }
 
 body {
@@ -68,8 +73,7 @@ body {
 }
 
 #logo {
-    height: auto;
-    width: 85px;
+    height: 60px
 }
 
 .btn-geral {
@@ -78,11 +82,11 @@ body {
 
 .btn-geral:hover {
     transform: translate(-5px, -5px);
-    box-shadow: 5px 5px 0 #05ffdb;
+    box-shadow: 5px 5px 0 var(--teal);
 }
 
 .separador {
-    padding: 0px 150px;
+    padding: 0 150px;
     height: 100vh;
     background-color: var(--background);
 }
@@ -111,7 +115,7 @@ body {
 }
 
 #funcao{
-    font-size: 35px;
+    font-size: clamp(40px, 8vw, 80px);
     color: var(--dimmed-text);
 }
 
@@ -142,18 +146,26 @@ body {
 }
 
 #sobre {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+    display: block;
     padding-top: 100px;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
+}
+
+#desc-n-img {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+}
+
+#img-w-grid {
+    display: flex;
+    align-self: center;
 }
 
 .titulo-paragrafo {
     font-family: var(--font-mono);
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     position: relative;
     margin: 10px 0px 40px;
@@ -161,6 +173,15 @@ body {
     font-size: clamp(26px,5vw,32px);
     white-space: nowrap;
     line-height: 1.1;
+}
+
+.titulo-paragrafo::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: var(--background-details);
 }
 
 #bio {
@@ -194,3 +215,89 @@ body {
     font-size: 14px;
     line-height: 12px;
 }
+
+#experiencia {
+    display: block;
+    padding-top: 100px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    width: 700px;
+    height: 400px;
+    margin: 0 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pass-btn {
+    user-select: none;
+    margin: 0 4%;
+    display: inherit;
+    width: 7%;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+    transition: color .5s ease, transform 0.3s ease;
+}
+
+.b:hover {
+    color: var(--teal);
+    transform: translateX(-10px);
+}
+
+.n:hover {
+    color: var(--teal);
+    transform: translateX(10px);
+}
+
+.carousel-content {
+    display: block;
+    max-width: 440px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: initial;
+    z-index: 1;
+}
+
+.text {
+    display: none;
+    animation: fadeInRight .5s ease-out
+}
+
+.text p {
+    margin-bottom: 10px;
+
+}
+
+.main {
+    color: #8892B0;
+    display: block;
+    
+}
+
+/*TODO:Pass this bullshit to javaSript*/
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+#nm {
+    color: var(--teal);
+    text-decoration: none;
+}
+
+#nm:hover {
+    text-decoration: underline;
+}
+
+

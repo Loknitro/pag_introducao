@@ -43,3 +43,34 @@ expLink.addEventListener("click", (event) => {
 
     target.scrollIntoView({behavior: "smooth"})
 });
+
+
+const previous = document.querySelector(".b")
+const next = document.querySelector(".n")
+const textoCarousel =  document.querySelector(".carousel-content").children
+let currentIndex = 0;
+
+if(currentIndex === 0 ) {
+    previous.style.opacity = 0;
+    previous.style.cursor = 'default';
+}
+
+next.addEventListener("click", function(event) {
+    if(currentIndex == 0) {
+        textoCarousel[currentIndex++].classList.remove('main')
+        textoCarousel[currentIndex].style.animation = 'fadeInRight 2.5s out'
+        textoCarousel[currentIndex].classList.add('main')
+        //TODO: This bullshit
+
+        previous.style.opacity = 1
+        previous.style.cursor = 'pointer'
+
+        if (currentIndex === textoCarousel.length - 1) {
+            next.style.opacity = 0;
+            next.style.cursort = 'default'
+        }
+
+    }
+});
+
+
